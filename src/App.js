@@ -8,9 +8,17 @@ import Pub from "./Components/Pub/Pub";
 class App extends React.Component {
   constructor() {
     super();
+    let today = new Date(),
+      date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
 
     this.state = {
       show: false,
+      date: date,
     };
   }
 
@@ -22,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar date={this.state.date} />
         <div className="mycounter">
           <Button variant="secondary" size="lg" onClick={this.setShow} block>
             {this.state.show ? "Hide Counter" : "Show Counter"}
