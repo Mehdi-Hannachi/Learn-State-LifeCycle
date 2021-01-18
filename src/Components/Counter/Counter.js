@@ -4,7 +4,7 @@ import "./counter.css";
 
 class Counter extends React.Component {
   constructor() {
-    console.log("Contructor()");
+    console.log("Contructor ()");
     super();
     this.state = {
       counter: 0,
@@ -14,7 +14,7 @@ class Counter extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Component did mount()");
+    console.log("Component Did Mount ()");
 
     this.setState({
       intervall: setInterval(
@@ -25,11 +25,12 @@ class Counter extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("Component did update ()");
+    console.log("Component Did Update ()");
   }
 
   componentWillUnmount() {
-    console.log("Component will unmount");
+    console.log("Component Will Unmount ()");
+    clearInterval(this.state.intervall);
   }
 
   increment = () => {
@@ -53,7 +54,7 @@ class Counter extends React.Component {
   };
 
   render() {
-    console.log("render");
+    console.log("render () ");
     return (
       <>
         <div className="counter">

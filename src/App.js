@@ -3,6 +3,7 @@ import "./App.css";
 import Counter from "./Components/Counter/Counter";
 import NavBar from "./Components/Navbar/NavBar";
 import { Button } from "react-bootstrap";
+import Pub from "./Components/Pub/Pub";
 
 class App extends React.Component {
   constructor() {
@@ -29,7 +30,7 @@ class App extends React.Component {
 
           {/* { this.state.show && <Counter />} */}
 
-          {this.state.show ? <Counter /> : <h1>Hidden</h1>}
+          {this.state.show ? <Counter /> : <Pub />}
         </div>
       </div>
     );
