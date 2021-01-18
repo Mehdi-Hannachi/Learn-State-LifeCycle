@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import Counter from "./Components/Counter/Counter";
+import NavBar from "./Components/Navbar/NavBar";
+import { Button } from "react-bootstrap";
 
 class App extends React.Component {
   constructor() {
@@ -18,14 +20,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <button className="visibility-btn" onClick={this.setShow}>
-          {this.state.show ? "Hide Counter" : "Show Counter"}
-        </button>
+      <div>
+        <NavBar />
+        <div className="mycounter">
+          <Button variant="secondary" size="lg" onClick={this.setShow} block>
+            {this.state.show ? "Hide Counter" : "Show Counter"}
+          </Button>
 
-        {/* { this.state.show && <Counter />} */}
+          {/* { this.state.show && <Counter />} */}
 
-        {this.state.show ? <Counter /> : <h1>Hidden</h1>}
+          {this.state.show ? <Counter /> : <h1>Hidden</h1>}
+        </div>
       </div>
     );
   }

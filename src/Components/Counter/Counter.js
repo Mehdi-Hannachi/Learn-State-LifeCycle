@@ -1,4 +1,6 @@
 import React from "react";
+import { Button, Badge } from "react-bootstrap";
+import "./counter.css";
 
 class Counter extends React.Component {
   constructor() {
@@ -53,21 +55,28 @@ class Counter extends React.Component {
   render() {
     console.log("render");
     return (
-      <div>
-        <h1>COUNTER (Statful Component)</h1>
-        <button className="decrement-btn" onClick={this.decrement}>
-          -
-        </button>
-        <span>{this.state.counter}</span>
-        <button className="increment-btn " onClick={this.increment}>
-          +
-        </button>
-        <br />
-        <button className="reset-btn" onClick={this.reset}>
-          Reset
-        </button>
+      <>
+        <div className="counter">
+          <Button variant="primary" onClick={this.decrement}>
+            -
+          </Button>
+          <span>{this.state.counter}</span>
+
+          <Button variant="primary" onClick={this.increment}>
+            +
+          </Button>
+
+          <Button variant="danger" onClick={this.reset}>
+            Reset
+          </Button>
+        </div>
+
+        <Badge variant="secondary" className="timer">
+          Timer
+        </Badge>
+
         <p>{this.state.timer}</p>
-      </div>
+      </>
     );
   }
 }
