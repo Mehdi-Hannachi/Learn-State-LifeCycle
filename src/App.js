@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Counter from "./Components/Counter/Counter";
+import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/Navbar/NavBar";
 import { Button } from "react-bootstrap";
 import Pub from "./Components/Pub/Pub";
@@ -39,6 +40,10 @@ class App extends React.Component {
           {/* { this.state.show && <Counter />} */}
 
           {this.state.show ? <Counter /> : <Pub />}
+        </div>
+
+        <div className="footer">
+          <Footer />
         </div>
       </div>
     );

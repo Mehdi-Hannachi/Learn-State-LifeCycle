@@ -26,12 +26,12 @@ class Counter extends React.Component {
 
   componentDidUpdate() {
     console.log("Component Did Update ()");
-    console.log(this.state.intervall);
+    // console.log(this.state.intervall);
   }
 
   componentWillUnmount() {
     console.log("Component Will Unmount ()");
-    // clearInterval(this.state.intervall);
+    clearInterval(this.state.intervall);
   }
 
   increment = () => {
