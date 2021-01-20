@@ -11,7 +11,7 @@ class Pub extends React.Component {
           style={{ borderRadius: "40px" }}
           width="800"
           height="250"
-          src="https://www.youtube.com/embed/TGG_A7saKSA?autoplay=1&mute=1"
+          src="https://www.youtube.com/embed/TGG_A7saKSA?autoplay=1&mute=1&loop=1"
           frameBorder="0"
           allowFullScreen
         ></iframe>

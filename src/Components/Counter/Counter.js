@@ -77,7 +77,9 @@ class Counter extends React.Component {
           Timer
         </Badge>
 
-        <p>{this.state.timer}</p>
+        <p>{`${Math.floor(this.state.timer / 3600)} : ${Math.floor(
+          (this.state.timer % 3600) / 60
+        )} : ${Math.floor((this.state.timer % 3600) % 60)}`}</p>
       </>
     );
   }
